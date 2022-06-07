@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clipboard API: event demonstration</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="./css/main.css" />
+<body>
+
+  <h1>Clipboard API: event demonstration</h1>
+
+  <p>This page uses <a href="https://developer.mozilla.org/Web/API/Clipboard_API">Clipboard API</a> events.</p>
+
+
+  <h2>Copy</h2>
+
+  <p>Any text on this page can be selected then:</p>
+
+  <ul>
+    <li>copied with <kbd>Ctrl</kbd>|<kbd>Cmd</kbd> + <kbd>C</kbd></li>
+    <li>cut with <kbd>Ctrl</kbd>|<kbd>Cmd</kbd> + <kbd>X</kbd></li>
+  </ul>
+
+  <p>The cut/copy event makes the clipboard text uppercase. Try pasting it into another application such as a text editor.</p>
+
+
+  <h2>Paste</h2>
+
+  <form action="#">
+
+    <p>
+      <label for="field1" class="block">Paste here using <kbd>Ctrl</kbd>|<kbd>Cmd</kbd> + <kbd>V</kbd>:</label>
+      <textarea id="field1" rows="10" cols="40"></textarea>
+    </p>
+
+    <button type="reset">clear</button>
+
+    <p>Text pasted into this box replaces the entire content and adds a 'pasted:' label.</p>
+
+  </form>
+
+<script type="module">
+const body = document.body;
+
+body.addEventListener('cut', cutCopyHandler);
+body.addEventListener('copy', cutCopyHandler);
+
+document.getElementById('field1').addEventListener('paste', pasteEvent);
+
+
+// cut or copy event handler
+function cutCopyHandler(e) {
+
+  const selection = document.getSelection();
+  e.clipboardData.setData('text/plain', selection.toString().toUpperCase());
+
+  if (e.type === 'cut') selection.deleteFromDocument();
+
+  e.preventDefault();
+
+}
+
+
+// paste event handler
+function pasteEvent(e) {
+
+  const paste = 'pasted:\n' + (e.clipboardData || window.clipboardData).getData('text');
+
+  e.target.value = paste;
+
+  e.preventDefault();
+}
+
+</script>
+
+
+<!-- <div class="card-v14 padding-sm flex flex-column col-6">
+                <h3 class="text-md">Being prepared</h3>
+                <p class="color-contrast-medium line-height-md margin-y-xs">With the freedom and independence of university life comes the added responsibility of managing your workload, understanding your new surroundings and thinking about where you want your studies to take you. To help you get prepared, our students share their expertise on managing the new workload, reflecting on their goal setting and challenging their thinking about imposter syndrome and the jump from college.</p>
+                <ul class="list list--border">
+                  <li> <a href="https://medium.com/library-peer-network/student-team-tips-managing-your-workload-afac0ca882a0">Managing your workload 1</a>
+                    & <a href="https://medium.com/library-peer-network/student-weekly-tips-managing-your-academic-workload-64454151c20e">Managing your workload 2</a></p>
+                  <p class="margin-top-auto">Our students reflect on how they adjusted to multiple workloads, dealt with  procrastination and developed a healthy work/life balance.</p></li>
+            
+                  <li> <a href="https://www.escholar.manchester.ac.uk/learning-objects/mle/goal-setting/story_html5.html">Goal setting</a>
+                    <p class="margin-top-auto">Our interactive Goal Setting resource is a chance to consider how all the pieces of university life can fit together to make your own unique picture of where you want be. </p></li>
+                  <li> <a href="https://medium.com/library-peer-network/lpodcastn-7-map-mdas-special-overcoming-impostor-syndrome-the-culture-shock-of-starting-at-210861a15dab">Podcast - imposter syndrome</a>
+                  <p class="margin-top-auto">Our Library Student Team discuss Imposter Syndrome, how to recognise it and what to do about it. </p>
+                  </li>
+                  <li> <a href="https://medium.com/library-peer-network/lpodcastn-3-differences-between-a-level-and-uni-essays-first-1st-and-worst-the-importance-759532df07b4?source=collection_category---4------0-----------------------">Podcast - Difference between University and A Levels</a>
+                  <p class="margin-top-auto">Our current students reflect on the challenge they overcame in making the transition from A Level in a reflective podcast to inspire and support in the knowledge that you are not alone!</p>
+                  </li>
+                  
+                </ul> -->
+                <!-- <h3 class="text-md">Supporting your writing</h3>
+                <div class="text-left">Developing your writing, and finding your academic voice, will be a key part of your progress over the duration of your studies. Our resources will help guide you through the first steps of structure, style and format as well as encourage you to think more critically in your assignments.</div>
+                <ul class="list list--border padding-top-sm">
+                  <li><p class="color-primary margin-top-auto"><a href="https://medium.com/library-peer-network/how-to-write-in-an-academic-style-tips-and-tricks-for-improving-your-writing-bc16136451da">Improving your Academic writing</a></p>
+                    <p class="margin-top-auto">Your academic writing style is unique to you but there are conventions and standards that it is helpful to know to work towards. It might take some time to find your academic voice and it is always a work in progress. In this blog, current students take you through their advice from structure, style and form through to formatting and proofreading. </p>
+                    
+                  </li>
+                  
+                </ul> -->
+</body>
+</html>

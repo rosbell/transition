@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      document.getElementsByTagName("html")[0].className += " js";
+    </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+
+
+<!-- // const copyPasteButton = document.querySelector("#textToCopy")
+// copyPasteButton.onclick = () => {
+//   navigator.clipboard.writeText(document.querySelector("#toDoLater").value)
+// }
+
+// const updateClipboard = () => {
+//   onclick = updateClipboard
+// }
+//define another function const copyToClipboard = () =>{}
+
+
+// }));
+//variabl names
+//textarea where checkbox content is put 'toDoLater' -->
+  </script>
+
+    <title>Transitioning to life at University</title>
+  </head>
+  
+  <!-- MAIN NAVIGATION  -->
+  <header class="header position-relative js-header ">
+    <div class="header__container container max-width-lg">
+      <div class="header__logo">
+        <img src="./assets/img/logo.gif" height="100px" />
+          
+      </div>
+  
+      <button class="btn btn--subtle header__trigger js-header__trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">
+        <i class="header__trigger-icon" aria-hidden="true"></i>
+        <span>Menu</span>
+      </button>
+  
+      <nav class="header__nav js-header__nav" id="header-nav" role="navigation" aria-label="Main">
+        <div class="header__nav-inner">
+          <div class="header__label">Main menu</div>
+          <ul class="header__list">
+            <li class="header__item"><a href="#about" class="header__link">About</a></li>
+            <li class="header__item"><a href="#university-message" class="header__link">University message</a></li>
+            <li class="header__item"><a href="#academic" class="header__link">Academic Resources</a></li>
+            <li class="header__item"><a href="#community" class="header__link">Community resources</a></li>
+            
+            <li class="header__item header__item--divider" aria-hidden="true"></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- MAIN NAVIGATION ENDS -->
+  
+ 
+  
+  
+  
+  <!-- LIST BUTTON STARTS -->
+  <!-- <div class="dr-nav-control-wrapper">
+    <div class="container height-100% flex items-center">
+      <button class="reset margin-left-auto dr-nav-control anim-menu-btn js-anim-menu-btn js-dr-nav-control js-tab-focus" aria-label="Toggle navigation" aria-controls="dr-nav-id">
+        <svg class="dr-nav-control__bg" aria-hidden="true" viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="22" stroke-miterlimit="10" />
+        </svg>
+        <i class="anim-menu-btn__icon anim-menu-btn__icon--arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div> -->
+  <!-- LIST BUTTON ENDS -->
+  
+
+  <!-- __PAGE CONTENT -->
+<div class="padding-md"></div>
+
+  <section class="diagonal-section bg-contrast-lower bg-opacity-80%">
+    <div class="container max-width-adaptive-sm padding-y-xxl">
+      <div class="article text-component text-center">
+        <h1 id="about">Transition Resource</h1>
+
+        <h3>What is this resource?</h3>
+        <p>This resource provides you with xyz thing. You can choose from this list of stuff which will help you get situated into your new course and city. These are just suggested tasks, there's no obligation to complete these tasks, we just think they could be helpful. </p>
+
+        <h3>How it works</h3>
+        <ol class="list list--ol">
+          <li>Read through the suggestions on this page</li>
+          <li>If you want add some content to your to do list, click the checkbox next to the text</li>
+          <li>You can look at your personlised list at any time by clicking on the <div class="article text-component text-center" style="display: inline-block !important"><a class="sticky-sharebar__btn text-center" aria-controls="drawer-2">
+              <svg class="icon icon--md margin-right-sm" viewBox="0 0 30 30">
+                <circle cx="15" cy="15" r="14" fill="var(--color-primary)" opacity=".2"></circle>
+                <path fill="none" stroke="var(--color-primary)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13v9"></path>
+                <circle cx="15" cy="8.5" r="1.5" fill="var(--color-primary)"></circle>
+              </svg>
+            </a></div> icon at the right of the screen
+            
+              <!-- <ul class="sticky-sharebar__list"> -->
+               
+                
+                 
+                <!-- <li> -->
+                <!-- </li> -->
+              <!-- </ul> -->
+          <li>When you're finished, click the 'Email my list' button to create a draft email to yourself so you don't forget</li>
+        </ol>
+       </div>
+       </div>
+       </section>
+
+       <section class="diagonal-section diagonal-section--flip-x bg-contrast-lower bg-opacity-50%">
+
+        <div class="container max-width-adaptive-sm padding-y-xxl">
+          <div class="text-center">
+            <div class="text-sm opacity-60% margin-bottom-xxs">A message from</div>
+      
+            <div class="text-component margin-bottom-sm" id="university-message">
+              <h1>The University of Manchester</h1>
+            </div>
+            </div>
+            <div class="text-left padding-sm">
+          <p>Watch this video from this person about these things</p>
+       
+       <div class="aspect-ratio-16:9" id="video">
+        <iframe src="./assets/vid/compulsory.mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload="none"></iframe>
+      </div>
+    
+      <div class="padding-sm"></div>
+
+      <button class="btn btn--primary" aria-controls="collapse-content">Transcript for video</button>
+
+<div id="collapse-content" class="is-hidden js-collapse" data-collapse-animate="on">
+  <div class="margin-top-xs padding-md bg-dark radius-md">
+    <div class="text-component padding-sm">
+      <h1 class="text-lg">Transcript for video</h1> 
+      <p class="opacity-60%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nam illum cum sequi totam neque excepturi enim repellendus inventore rerum quod iusto eligendi, itaque autem nostrum reiciendis assumenda dolore commodi fuga quisquam veniam aperiam. Perspiciatis tenetur necessitatibus qui consequuntur molestiae, aliquid illum, nam quod deserunt animi commodi.</p>
+    </div>
+  </div>
+</div>
+<div class="padding-sm" id="spacer"></div>
+<!-- CHECKBOX -->
+<div class="card-v14-check flex-column bg-accent color-bg padding sm">
+  <div class="article text-component padding-top-sm padding-sm">
+    <div class="contentList">
+      <div class="custom-checkbox">
+        
+        <input
+        class="custom-checkbox__input"
+        type="checkbox"
+        aria-label="Checkbox label"
+        value="Watch the Welcome video"
+        
+        id="welcome-video"
+        />
+        <label for = "welcome-video">Check this box to watch this video later later</label>
+
+        <div class="custom-checkbox__control" aria-hidden="true">
+          
+        </div>
+      </div>
+      </div>
+  </div>
+</div>
+
+<!-- CHECKBOX -->    
+
+</div>
+</section>
+<!-- LIST START -->
+
+
+<div class="drawer js-drawer" id="drawer-2">
+  <div class="drawer__content bg-light inner-glow shadow-md flex flex-column" role="alertdialog" aria-labelledby="drawer-title-2">
+    <header class="flex items-center justify-between flex-shrink-0 border-bottom border-contrast-lower padding-x-sm padding-y-xs">
+      <h1 id="drawer-title-2" class="text-md text-truncate">My list</h1>
+      <button class="reset drawer__close-btn js-drawer__close js-tab-focus">
+        <svg class="icon icon--xs" viewBox="0 0 16 16"><title>Close list panel</title><g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line><line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line></g></svg>
+      </button>
+    </header>
+    
+    <div class="drawer__body padding-sm js-drawer__body">
+      <div class="text-component" id="drawer-list">
+        <div id="sideArea">
+          
+        </div>
+        
+      </div>
+      <footer class="padding-md margin-top-auto border-top">
+        <hr/>
+        <input type="button" id="copyID" value="Copy" class="btn btn--primary"/>
+        <input type="button" id="emailMe" onclick="return false" value="Email" class="btn btn--primary">
+       
+        </footer>
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- LIST ENDS -->
+    
+    <section class="diagonal-section bg-contrast-lower bg-opacity-80%">
+      <div class="container max-width-adaptive-sm padding-y-xxl">
+        <div class="article text-component text-center">
+          <div class="text-sm opacity-60% margin-bottom-xxs">Preparing for</div>
+          
+          <div class="text-component margin-bottom-sm">
+            <h1 id="academic">Academic life</h1>
+            <div class="text-left">
+           
+          </div>
+        </div>
+        
+      </p>
+    </div>
+
+    <div class="aspect-ratio-16:9" id="video">
+      <iframe src="./assets/vid/academic.mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload="none"></iframe>
+    </div>
+
+    <div class="grid gap-sm padding-y-sm">
+      
+      <div id="checkboxAndCard">
+        <div class="card-v14 padding-sm flex flex-column">
+          <h3 class="text-md">Getting ready for learning</h3>
+          <div class="text-left"> Take control of your learning at university and let our resources guide you through your next steps. Read some 'top tips' from current students, who have all successfully made the leap to higher education.</div>
+          <ul class="list list--border padding-top-sm">
+            <li><p class="color-primary margin-top-auto"><a href="https://mlemanchester.medium.com/transition-to-university-ce4efafbc286">Transition videos</a></p> 
+              <p class="margin-top-auto"> Hear from current students through a collection of short video interviews about their move to University study</p></li>
+              <li><p class="color-primary margin-top-auto"><a href="https://studentteam.medium.com/top-ten-tips-group-work-c34dc0c531b5">Group work</a></p>
+                <p class="margin-top-auto">
+                  At University you will need to work alongside new peers, and group projects can often be challenging without the familiarity of old friends. Let our Library Student Team take you through their ‘top tips’ for groupwork. 
+                </p></li>
+                <li><p class="color-primary margin-top-auto"><a href="https://medium.com/library-peer-network/navigating-online-teaching-group-etiquette-d83e8312f772">Navigating online learning</a></p>
+                  <p class="margin-top-auto">Advice from our Library Student Team on how to approach flexible learning online.</p>
+                </li>
+                </ul>
+
+              </div>
+              <!-- CHECKBOX -->
+              <div class="card-v14-check flex-column bg-accent color-bg">
+                <div class="article text-component padding-top-sm padding-sm">
+                  <div class="contentList">
+                    <div class="custom-checkbox">
+                      
+                      <input
+                      class="custom-checkbox__input"
+                      type="checkbox"
+                      aria-label="Checkbox label"
+                      value="Visit the 'Getting ready for learning' links"
+                      
+                      id="getting-ready"
+                      />
+                      <label for = "getting-ready">Check this box to do this later</label>
+                      
+                      <div class="custom-checkbox__control" aria-hidden="true">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+  <!-- CHECKBOX ENDS -->
+            </div>
+          </div>
+                  <!-- <div class="card-v14-check flex-column col-6 bg-accent color-bg">
+                    <div class="article text-component padding-top-sm padding-sm">
+                      <div class="contentList">
+                        <div class="custom-checkbox">
+                          
+                          <input
+                          class="custom-checkbox__input"
+                          type="checkbox"
+                          aria-label="Checkbox label"
+                          value="Visit the 'Supporting your writing' links"
+                          
+                          id="supporting-writing"
+                          />
+                          <label for = "supporting-writing">Check this box to do this later</label>
+              
+                          <div class="custom-checkbox__control" aria-hidden="true">
+                            
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div> -->
+                    <div id="checkboxAndCard">
+                    <div class="card-v14 padding-sm flex flex-column">
+                      
+                      <h3 class="text-md">Being prepared</h3>
+                      <p class="color-contrast-medium line-height-md margin-y-xs">With the freedom and independence of university life comes the added responsibility of managing your workload, understanding your new surroundings and thinking about where you want your studies to take you. To help you get prepared, our students share their expertise on managing the new workload, reflecting on their goal setting and challenging their thinking about imposter syndrome and the jump from college.</p>
+                      <ul class="list list--border">
+                        <li> <a href="https://medium.com/library-peer-network/student-team-tips-managing-your-workload-afac0ca882a0">Managing your workload 1</a>
+                          & <a href="https://medium.com/library-peer-network/student-weekly-tips-managing-your-academic-workload-64454151c20e">Managing your workload 2</a></p>
+                        <p class="margin-top-auto">Our students reflect on how they adjusted to multiple workloads, dealt with  procrastination and developed a healthy work/life balance.</p></li>
+                  
+                        <li> <a href="https://www.escholar.manchester.ac.uk/learning-objects/mle/goal-setting/story_html5.html">Goal setting</a>
+                          <p class="margin-top-auto">Our interactive Goal Setting resource is a chance to consider how all the pieces of university life can fit together to make your own unique picture of where you want be. </p></li>
+                        <li> <a href="https://medium.com/library-peer-network/lpodcastn-7-map-mdas-special-overcoming-impostor-syndrome-the-culture-shock-of-starting-at-210861a15dab">Podcast - imposter syndrome</a>
+                        <p class="margin-top-auto">Our Library Student Team discuss Imposter Syndrome, how to recognise it and what to do about it. </p>
+                        </li>
+                        <li> <a href="https://medium.com/library-peer-network/lpodcastn-3-differences-between-a-level-and-uni-essays-first-1st-and-worst-the-importance-759532df07b4?source=collection_category---4------0-----------------------">Podcast - Difference between University and A Levels</a>
+                        <p class="margin-top-auto">Our current students reflect on the challenge they overcame in making the transition from A Level in a reflective podcast to inspire and support in the knowledge that you are not alone!</p>
+                        </li>
+                        
+                      </ul>
+                      
+                    </div>
+                    
+                    <div class="card-v14-check flex-column bg-accent color-bg">
+                      <div class="article text-component padding-top-sm padding-sm">
+                        <div class="contentList">
+                          <div class="custom-checkbox">
+                            
+                            <input
+                            class="custom-checkbox__input"
+                            type="checkbox"
+                            aria-label="Checkbox label"
+                            value="Visit the 'Being prepared' links"
+                            
+                            id="being-prepared"
+                            />
+                            <label for = "being-prepared">Check this box to do this later</label>
+                
+                            <div class="custom-checkbox__control" aria-hidden="true">
+                              
+                            </div>
+                          </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="padding-sm" id="spacer"></div>
+                  <!-- </div>
+                  </div> -->
+                  <div id="checkboxAndCard">
+                  <div class="card-v14 padding-sm flex flex-column">
+                        
+                    <h3 class="text-md">Digital Skills</h3>
+                    <p class="line-height-md margin-y-xs">Information about Digital skills and how they can help. 
+                      <a href="https://www.escholar.manchester.ac.uk/learning-objects/digicap/" title="Digital Capabilities tool">Visit the Digital Capabilities resource</a>
+                      <p class="line-height-md margin-y-xs">You won't be able to log in to the main Digital Capabilities tool, but you can take a look around our resource to prepare.</p>
+  </p>
+  </div>
+  <div class="card-v14-check flex-column bg-accent color-bg">
+    <div class="article text-component padding-top-sm padding-sm">
+      <div class="contentList">
+        <div class="custom-checkbox">
+          
+          <input
+          class="custom-checkbox__input"
+          type="checkbox"
+          aria-label="Checkbox label"
+          value="Visit the Digital Skills resource "
+          
+          id="digital-skills"
+          />
+          <label for = "digital-skills">Check this box to do this later</label>
+
+          <div class="custom-checkbox__control" aria-hidden="true">
+            
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+                </div>
+</div>
+                </section>
+
+                <section class="diagonal-section diagonal-section--flip-x bg-contrast-lower bg-opacity-50%">
+
+                  <div class="container max-width-adaptive-xl padding-y-xxl">
+                    <div class="text-center">
+                      <div class="text-sm opacity-60% margin-bottom-xxs">Joining a new</div>
+                
+                      <div class="text-component margin-bottom-sm">
+                        <h1 id="community">Community</h1>
+                      </div>
+                    </div>
+                    <div class="container max-width-adaptive-sm padding-y-xxl">
+
+                      <div class="aspect-ratio-16:9" id="video">
+                        <iframe src="./assets/vid/compulsory.mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload="none"></iframe>
+                      </div>
+                    </div>
+
+
+                    <section class="position-relative z-index-1 margin-y-lg">
+                      <div class="container max-width-100\%">
+                        <div class="bg-light inner-glow shadow-md">
+                          <div class="grid">
+                            <div class="flex items-center col-6@md">
+                              <div class="padding-md padding-x-lg@lg padding-y-xxl@lg">
+                                <div class="text-sm color-contrast-medium margin-bottom-xxs">This is where</div>
+                                
+                                <div class="text-component padding-bottom-sm">
+                                  <h1>Community</h1>
+                                  <p>Information might go. Maybe it's about joining societies. Maybe it's about which buses to catch! Buses are confusing in Manchester, though not as bad as when I moved here in 2002. I think there were about 8 million bus companies at that time. Remember Finglands? What a delightfully 70s colour palette. Anyway, community information goes here. And maybe we'd put a different picture. This this distressed minifig is pretty cute</p>
+                                </div>
+                                
+                                <div class="margin-top-sm">
+                                  <div class="card-v14-check flex-column bg-accent color-bg">
+                                    <div class="article text-component padding-top-sm padding-sm">
+                                      <div class="contentList">
+                                        <div class="custom-checkbox">
+                                          
+                                          <input
+                                          class="custom-checkbox__input"
+                                          type="checkbox"
+                                          aria-label="Checkbox label"
+                                          value="Visit the Community links"
+                                          
+                                          id="community"
+                                          />
+                                          <label for = "community">Check this box to do this later</label>
+                                          
+                                          <div class="custom-checkbox__control" aria-hidden="true">
+                                            
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                               
+                                <figure class="col-6@md">
+                                  <img class="block width-100% height-100% object-cover" src="./assets/img/lego.jpg" alt="Image description">
+                                </figure>
+                              </div>
+                               
+                            </div>
+                            <section class="position-relative z-index-1 padding-y-lg">
+                              <h3 class="text-center padding-lg">Some more examples of content layout</h3>
+                              <div class="container max-width-adaptive-lg">
+                                <div class="grid gap-md">
+                                  <div class="col-6@md">
+                                    <div class="flex gap-sm">
+                                      <figure class="flex-shrink-0">
+                                        <img class="block width-xl width-xxxl@md" src="./assets/img/001-idea.png" alt="Image description">
+                                      </figure>
+                                
+                                      <div class="text-component">
+                                        <h4>Do this thing</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium assumenda doloribus eos provident modi.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                              
+                                  <div class="col-6@md">
+                                    <div class="flex gap-sm">
+                                      <figure class="flex-shrink-0">
+                                        <img class="block width-xl width-xxxl@md" src="./assets/img/002-design-tools.png" alt="Image description">
+                                      </figure>
+                                
+                                      <div class="text-component">
+                                        <h4>Do another thing</h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam distinctio inventore architecto.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                              
+                                  <div class="col-6@md">
+                                    <div class="flex gap-sm">
+                                      <figure class="flex-shrink-0">
+                                        <img class="block width-xl width-xxxl@md" src="./assets/img/003-sketchbook.png" alt="Image description">
+                                      </figure>
+                                
+                                      <div class="text-component">
+                                        <h4>Try this</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium assumenda doloribus eos provident modi.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                              
+                                  <div class="col-6@md">
+                                    <div class="flex gap-sm">
+                                      <figure class="flex-shrink-0">
+                                        <img class="block width-xl width-xxxl@md" src="./assets/img/026-feedback.png" alt="Image description">
+                                      </figure>
+                                
+                                      <div class="text-component">
+                                        <h4>Or maybe this</h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam distinctio inventore architecto.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+    
+                              <div class="margin-top-sm">
+                                <div class="card-v14-check flex-column bg-accent color-bg">
+                                  <div class="article text-component padding-top-sm padding-sm">
+                                    <div class="contentList">
+                                      <div class="custom-checkbox">
+                                        
+                                        <input
+                                        class="custom-checkbox__input"
+                                        type="checkbox"
+                                        aria-label="Checkbox label"
+                                        value="Visit the community links about thing thing and thing"
+                                        
+                                        id="community2"
+                                        />
+                                        <label for = "community2">Check this box to do this later</label>
+                                        
+                                        <div class="custom-checkbox__control" aria-hidden="true">
+                                          
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                          </div>
+                          </div>
+                      </section>
+                     
+
+
+
+            </div>
+          </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STICKY LIST BUTTON STARTS -->
+    <div class="sticky-sharebar js-sticky-sharebar">
+      <ul class="sticky-sharebar__list">
+       
+        
+         
+        <li>
+          <a class="sticky-sharebar__btn" aria-controls="drawer-2">
+            <svg class="icon icon--md margin-right-sm" viewBox="0 0 30 30">
+              <circle cx="15" cy="15" r="14" fill="var(--color-primary)" opacity=".2"></circle>
+              <path fill="none" stroke="var(--color-primary)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13v9"></path>
+              <circle cx="15" cy="8.5" r="1.5" fill="var(--color-primary)"></circle>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- STICKY LIST BUTTON ENDS -->
+
+    <!-- SIDE LIST STARTS -->
+
+               
+             
+               
+                  
+</div> 
+</section>
+            
+
+
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/extra.js"></script>
+
+    
+</body>
+  </body>
+              
+</html>
+
+
+<!-- document.querySelector("toDoLater").value -->
