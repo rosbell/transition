@@ -1,0 +1,48 @@
+@use "../base" as *;
+@use "_1_tooltip.scss" as *;
+
+/* -------------------------------- 
+
+File#: _2_copy-to-clipboard
+Title: Copy To Clipboard
+Descr: A Vanilla JavaScript plugin to copy content to the clipboard
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.copy-to-clip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-md);
+  background-color: alpha(var(--color-contrast-higher), 0.1);
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  &:hover {
+    background-color: alpha(var(--color-contrast-higher), 0.15);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px alpha(var(--color-contrast-higher), 0.35);
+  }
+}
+
+.copy-to-clip__icon-check {
+  stroke-dashoffset: 8.49;
+  stroke-dasharray: 8.49 8.49;
+  transition: stroke-dashoffset 0.3s;
+}
+
+.copy-to-clip--copied {
+  /* added in JS when content has been copied */
+  .copy-to-clip__icon-check {
+    stroke-dashoffset: 0;
+  }
+}
