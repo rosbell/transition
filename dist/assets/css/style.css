@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   width: calc(100% - 2 * var(--component-padding));
   margin-left: auto;
@@ -42,7 +43,6 @@
     .grid > *, .flex[class*=gap-] > * {
       margin-bottom: var(--sub-gap-y);
     }
-
     .grid {
       --offset: var(--gap-x);
       --gap-modifier: 0;
@@ -51,7 +51,6 @@
     .grid > * {
       margin-left: var(--offset);
     }
-
     .flex[class*=gap-] > * {
       margin-left: var(--sub-gap-x);
     }
@@ -87,36 +86,29 @@
 }
 
 @media (min-width: 32rem) {
-
   @media not all and (min-resolution: 0.001dpcm) {
   }
 }
 @media (min-width: 48rem) {
-
   @media not all and (min-resolution: 0.001dpcm) {
   }
 }
 @media (min-width: 64rem) {
-
   .col-6\@md {
     --span: 6;
   }
-
    .col-6\@md {
     flex-basis: calc((100% - (var(--grid-columns) - var(--gap-modifier, 1)) * var(--sub-gap-x)) * var(--span) / var(--grid-columns) + (var(--span) - 1) * var(--sub-gap-x));
     max-width: calc((100% - (var(--grid-columns) - var(--gap-modifier, 1)) * var(--sub-gap-x)) * var(--span) / var(--grid-columns) + (var(--span) - 1) * var(--sub-gap-x));
   }
-
   @media not all and (min-resolution: 0.001dpcm) {
   }
 }
 @media (min-width: 80rem) {
-
   @media not all and (min-resolution: 0.001dpcm) {
   }
 }
 @media (min-width: 90rem) {
-
   @media not all and (min-resolution: 0.001dpcm) {
   }
 }
@@ -130,10 +122,10 @@
 
 html, body, div, span, object, iframe,
 h1, h3, h4, p,
-a, code, img, s,
-small, var,
+a, code, img, ins, s,
+small, strong, var,
 b, u, i, center, ol, ul, li, label,
-article, embed,
+article, aside, embed,
 figure, footer, header,
 menu, nav, section, summary,
 time, audio, video {
@@ -150,8 +142,8 @@ body {
   background-color: var(--color-bg, white);
 }
 
-article, figure,
-footer, header, menu, nav, section, main {
+article, aside, figure,
+footer, header, menu, nav, section {
   display: block;
 }
 
@@ -203,9 +195,9 @@ img, video, svg {
 }
 
 :root {
-  --radius-sm: calc(var(--radius, 0.25em)/2);
-  --radius-md: var(--radius, 0.25em);
-  --radius-lg: calc(var(--radius, 0.25em)*2);
+  --radius-sm: calc(var(--radius, 0.375em)/2);
+  --radius-md: var(--radius, 0.375em);
+  --radius-lg: calc(var(--radius, 0.375em)*2);
   --shadow-xs: 0 0.1px 0.3px rgba(0, 0, 0, 0.06),
                 0 1px 2px rgba(0, 0, 0, 0.12);
   --shadow-sm: 0 0.3px 0.4px rgba(0, 0, 0, 0.025),
@@ -268,6 +260,10 @@ small {
 a, .link {
   color: var(--color-primary, hsl(250deg, 84%, 54%));
   text-decoration: underline;
+}
+
+strong {
+  font-weight: bold;
 }
 
 s {
@@ -443,6 +439,10 @@ u {
   display: none;
 }
 
+.margin-top-xxxs {
+  margin-top: var(--space-xxxs);
+}
+
 .margin-top-xs {
   margin-top: var(--space-xs);
 }
@@ -476,11 +476,6 @@ u {
   margin-bottom: var(--space-xs);
 }
 
-.margin-y-lg {
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-lg);
-}
-
 .padding-sm {
   padding: var(--space-sm);
 }
@@ -497,10 +492,6 @@ u {
   padding-top: var(--space-sm);
 }
 
-.padding-bottom-sm {
-  padding-bottom: var(--space-sm);
-}
-
 .padding-x-sm {
   padding-left: var(--space-sm);
   padding-right: var(--space-sm);
@@ -514,11 +505,6 @@ u {
 .padding-y-sm {
   padding-top: var(--space-sm);
   padding-bottom: var(--space-sm);
-}
-
-.padding-y-lg {
-  padding-top: var(--space-lg);
-  padding-bottom: var(--space-lg);
 }
 
 .padding-y-xxl {
@@ -572,6 +558,10 @@ u {
   color: hsla(var(--color-contrast-medium-h), var(--color-contrast-medium-s), var(--color-contrast-medium-l), var(--color-o, 1));
 }
 
+.color-contrast-higher {
+  color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), var(--color-o, 1));
+}
+
 .color-primary {
   color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), var(--color-o, 1));
 }
@@ -586,15 +576,12 @@ u {
   width: var(--size-xl, 4rem);
 }
 
-.width-100\% {
-  width: 100%;
-}
-
 .height-100\% {
   height: 100%;
 }
 
 :root {
+  --max-width-xxxxxs: 17.5rem;
   --max-width-xxxxs: 20rem;
   --max-width-xxxs: 26rem;
   --max-width-xxs: 32rem;
@@ -659,10 +646,6 @@ u {
   position: relative;
 }
 
-.z-index-1 {
-  z-index: 1;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -689,6 +672,10 @@ u {
 
 .radius-md {
   border-radius: var(--radius-md);
+}
+
+.radius-lg {
+  border-radius: var(--radius-lg);
 }
 
 .bg, [class^=bg-], [class*=" bg-"] {
@@ -723,11 +710,6 @@ u {
   --bg-o: 0.8;
 }
 
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 [class^=flip], [class*=" flip"],
 [class^=-rotate], [class*=" -rotate"],
 [class^=rotate], [class*=" rotate"],
@@ -744,25 +726,18 @@ u {
   transform: translate3d(var(--translate-x, var(--translate)), var(--translate-y, var(--translate)), var(--translate-z, 0)) rotateX(var(--rotate-x, 0)) rotateY(var(--rotate-y, 0)) rotateZ(var(--rotate-z, var(--rotate))) skewX(var(--skew-x, var(--skew))) skewY(var(--skew-y, 0)) scaleX(var(--scale-x, var(--scale))) scaleY(var(--scale-y, var(--scale)));
 }
 
+.transition {
+  transition-property: var(--transition-property, all);
+  transition-duration: var(--transition-duration, 0.2s);
+  transition-delay: var(--transition-delay, 0s);
+}
+
 .visible {
   visibility: visible;
 }
 @media (min-width: 64rem) {
-
   .width-xxxl\@md {
     width: var(--size-xxxl, 8rem);
-  }
-}
-@media (min-width: 80rem) {
-
-  .padding-x-lg\@lg {
-    padding-left: var(--space-lg);
-    padding-right: var(--space-lg);
-  }
-
-  .padding-y-xxl\@lg {
-    padding-top: var(--space-xxl);
-    padding-bottom: var(--space-xxl);
   }
 }
 :root {
@@ -1484,18 +1459,15 @@ Usage: codyhouse.co/license
     -webkit-clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
             clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
   }
-
   .diagonal-section--flip-x {
     -webkit-clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
             clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
   }
-
   .diagonal-section-top {
     padding-top: calc(var(--diagonal-section-offset) / 2);
     -webkit-clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% 100%, 0% 100%);
   }
-
   .diagonal-section-top--flip-x {
     -webkit-clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% 100%, 0% 100%);
             clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% 100%, 0% 100%);
@@ -1504,13 +1476,11 @@ Usage: codyhouse.co/license
     -webkit-clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
             clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
   }
-
   .diagonal-section-bottom {
     padding-bottom: calc(var(--diagonal-section-offset) / 2);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
   }
-
   .diagonal-section-bottom--flip-x {
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
             clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
@@ -1519,7 +1489,6 @@ Usage: codyhouse.co/license
     -webkit-clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
             clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
   }
-
   .diagonal-section-top--flip-x.diagonal-section-bottom--flip-x {
     -webkit-clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
             clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
@@ -1582,8 +1551,7 @@ Usage: codyhouse.co/license
 .drawer__body {
   height: 100%;
   overflow: auto;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: contain;
+  overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -1869,8 +1837,7 @@ Usage: codyhouse.co/license
   background-color: var(--color-bg);
   box-shadow: var(--shadow-md);
   overflow: auto;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: contain;
+  overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
   display: none;
 }
@@ -1972,46 +1939,38 @@ Usage: codyhouse.co/license
     max-height: none;
     box-shadow: none;
     overflow: visible;
-    -ms-scroll-chaining: chained;
-        overscroll-behavior: auto;
+    overscroll-behavior: auto;
     display: block;
   }
   .header__nav::before {
     display: none;
   }
-
   .header__nav-inner {
     padding: 0;
   }
-
   .header__label {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
     -webkit-clip-path: inset(50%);
             clip-path: inset(50%);
   }
-
   .header__list {
     display: flex;
     align-items: center;
   }
-
   .header__item {
     display: inline-block;
     margin-bottom: 0;
     margin-left: var(--space-md);
   }
-
   .header__link,
 .header__nav-btn {
     font-size: 1.125rem;
   }
-
   .header__item--divider {
     height: 1em;
     width: 1px;
   }
-
   .header__trigger {
     display: none;
   }
@@ -2051,6 +2010,46 @@ html:not(.js) .header__nav-inner {
   html:not(.js) .header__container {
     display: flex;
   }
+}
+
+/* -------------------------------- 
+
+File#: _1_note
+Title: Note
+Descr: A brief piece of information given to the user
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.note {
+  background-color: var(--color-bg-light);
+  border-left: 3px solid var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  /* 👇 you can ovveride this padding using the padding utility classes */
+}
+.note:not([class^=padding-]):not([class*=" padding-"]) {
+  padding: var(--space-sm);
+}
+
+.note--warning {
+  border-left-color: var(--color-warning);
+}
+
+.note--error {
+  border-left-color: var(--color-error);
+}
+
+.note--success {
+  border-left-color: var(--color-success);
+}
+
+.text-component {
+  /* reset in case the component is used inside a .text-component */
+}
+.text-component .note__content > *:last-child {
+  margin-bottom: 0;
+}
+.text-component .note__title {
+  margin-bottom: 0;
 }
 
 /* -------------------------------- 
@@ -2100,7 +2099,6 @@ Usage: codyhouse.co/license
   font-size: var(--text-sm);
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   transition: all var(--radio-switch-animation-duration);
 }
@@ -2141,8 +2139,7 @@ Usage: codyhouse.co/license
 :root {
   --search-input-btn-width: 2.2em;
   --search-input-icon-size: 1em;
-  --search-input-shortcut-margin: 0.325em;
-  /* gap between the shortcut badge and the input edges */
+  --search-input-shortcut-margin: 0.325em; /* gap between the shortcut badge and the input edges */
 }
 
 .search-input {
@@ -2195,8 +2192,7 @@ Usage: codyhouse.co/license
   --size: var(--search-input-icon-size);
   margin-left: auto;
   margin-right: auto;
-  color: var(--color-contrast-low);
-  /* icon color */
+  color: var(--color-contrast-low); /* icon color */
   transition: 0.2s;
 }
 .search-input--icon-left .search-input__btn {
@@ -2207,8 +2203,7 @@ Usage: codyhouse.co/license
 
 .search-input__btn:focus .icon,
 .search-input .search-input__input:focus + .search-input__btn .icon {
-  color: var(--color-primary);
-  /* active icon color */
+  color: var(--color-primary); /* active icon color */
 }
 
 /* --shortcut */
@@ -2646,8 +2641,7 @@ Usage: codyhouse.co/license
 }
 .sticky-sharebar__btn .icon {
   position: relative;
-  color: var(--color-contrast-medium);
-  /* icon color */
+  color: var(--color-contrast-medium); /* icon color */
   display: block;
   margin: auto;
   z-index: 2;

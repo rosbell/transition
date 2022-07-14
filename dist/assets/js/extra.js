@@ -5,6 +5,7 @@ function updateTextArea() {
   );
   allVals.push(...checkboxes);
 
+
   allVals = allVals.map((el) => {
     return el.defaultValue;
   });
