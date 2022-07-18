@@ -117,9 +117,13 @@
             <div class="text-left padding-sm">
           <p>Watch this video from this person about these things</p>
        
-       <div class="aspect-ratio-16:9" id="video">
-        <iframe src="./assets/vid/compulsory.mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload="none"></iframe>
-      </div>
+          <div id="videobox" class="flex flex-center">
+
+            <video controls width="750">
+              <source src="./assets/vid/compulsory.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="padding-sm" id="spacer"></div>
     
       <div class="padding-sm"></div>
 
@@ -262,9 +266,13 @@
       </p>
     </div>
 
-    <div class="aspect-ratio-16:9" id="video">
-      <iframe src="http://www.escholar.manchester.ac.uk/learning-objects/transition/draft/assets/vid/academic.mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload="none"></iframe>
+    <div id="videoboxAcademic" class="flex flex-center">
+
+      <video controls width="750">
+        <source src="./assets/vid/academic.mp4" type="video/mp4">
+      </video>
     </div>
+    <div class="padding-sm" id="spacer"></div>
 
     <div class="grid gap-sm padding-y-sm">
       
@@ -390,7 +398,7 @@
                       Throughout your time at The University of Manchester, we will support you to develop your digital skills and confidence to help with your studies and prepare you for your future career.</p>
 
 <p>Developing your digital skills can enable you to make the most of your time at University and could even boost your degree result. For example, they can help you to analyse information, design solutions to problems, organise your thinking and influence others.</p>
-
+<p></p>
 <p>Being able to use technology effectively is frequently listed as one of the top graduate skills sought by employers.  Most jobs involve using technology to do the role more effectively or efficiently.  At Manchester we will help you prepare for the future and provide you with the opportunities and the support you need.</p>
   <ul class="list list--border">
     <li>
@@ -488,15 +496,17 @@
       <div class="text-sm opacity-60% margin-bottom-xxs">Joining a new</div>
       
       <div class="text-component margin-bottom-sm">
-        <h1 id="community">Community</h1>
+        <h1 id="communityHeading">Community</h1>
       </div>
     </div>
     <div class="container max-width-adaptive-sm padding-y-xxl">
-      
-      <div class="aspect-ratio-16:9" id="video">
-        <iframe src="./assets/vid/compulsory.mp4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen preload="none"></iframe>
+      <div id="videoboxCommunity" class="flex flex-center">
+
+        <video controls width="750">
+          <source src="./assets/vid/community.mp4" type="video/mp4">
+        </video>
       </div>
-      
+      <div class="padding-sm" id="spacer"></div>
       
       <div id="checkboxAndCard">
         <div class="card-v14 padding-sm flex flex-column">
@@ -539,9 +549,7 @@
                             </div>
                           </div>
                                 </div>
-                              
-                              
-                              
+
                               <div class="padding-sm" id="spacer"></div>
                               <!-- STUDENTS UNION BOX -->
                               <aside class="note">
